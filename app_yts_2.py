@@ -9,7 +9,7 @@ import streamlit as st
 
 # Set page title and icon
 st.set_page_config(
-    page_title="YouTube Downloader",  
+    page_title="YouTube | TikTok Downloader",  
     page_icon="🎥",  
 )
 
@@ -36,8 +36,8 @@ def download_with_ytdlp(url):
     
 
 def main():
-    st.title("Youtube Video Downloader")
-    url = st.text_input("Enter the YouTube video URL:")
+    st.title("Youtube | TikTok Video Downloader")
+    url = st.text_input("Enter the video URL:")
     if st.button("Download"):
         if url:
             filename = download_with_ytdlp(url)
