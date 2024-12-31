@@ -22,7 +22,8 @@ def download_with_ytdlp(url):
         }
         st.write("Downloading...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(url, download=True)
+            #info = ydl.extract_info(url, download=True)
+            info = ydl.download([url])
             filename = ydl.prepare_filename(info)
             st.success("Download complete!")
             return filename
