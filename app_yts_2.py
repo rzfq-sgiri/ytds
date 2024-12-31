@@ -17,7 +17,8 @@ def download_with_ytdlp(url):
     try:
         ydl_opts = {
             'format': 'best',
-            'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder             
+            'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder      
+            'ignoreerrors': True,
         }
         st.write("Downloading...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
