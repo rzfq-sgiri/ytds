@@ -1,5 +1,6 @@
-# ytds
-Video Downloader Streamlit Platform
+# Video Downloader (Youtube)
+
+This is video downloader for youtube using yt-dlp libraries.
 
 
 
