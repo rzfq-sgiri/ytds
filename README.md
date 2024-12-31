@@ -1,7 +1,7 @@
 # Video Downloader (Youtube)
 
 This is video downloader for youtube using yt-dlp libraries.
-Support MP4 Video. 
+Support MP4 Video. Also support TikTok Video 
 
 
 
