@@ -8,11 +8,11 @@ def download_with_ytdlp(url):
             'format': 'best',
             'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder
         }
-        st.write("Downloading with yt-dlp...")
+        st.write("Downloading...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(url, download=True)
             filename = ydl.prepare_filename(info)
-            st.success("Download complete with yt-dlp!")
+            st.success("Download complete!")
             return filename
     except Exception as e:
         st.error(f"yt-dlp failed: {e}")
