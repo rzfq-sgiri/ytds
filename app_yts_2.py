@@ -2,11 +2,15 @@ import streamlit as st
 import yt_dlp
 import os
 
+
+#update: error on certain video music
+
 def download_with_ytdlp(url):
     try:
         ydl_opts = {
             'format': 'best',
             'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder
+            'cookiefile': 'cookies.txt',  # Tambahkan baris ini
         }
         st.write("Downloading...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
