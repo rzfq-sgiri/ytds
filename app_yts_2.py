@@ -5,6 +5,14 @@ import os
 
 #update: error on certain video music
 
+import streamlit as st
+
+# Set page title and icon
+st.set_page_config(
+    page_title="YouTube Downloader",  # Ganti dengan nama aplikasi anda
+    page_icon="🎥",  # Ganti dengan emoji atau ikon unicode lain
+)
+
 def download_with_ytdlp(url):
     try:
         ydl_opts = {
@@ -18,9 +26,13 @@ def download_with_ytdlp(url):
             filename = ydl.prepare_filename(info)
             st.success("Download complete!")
             return filename
+    except yt_dlp.utils.DownloadError:
+        st.error("This video cannot be downloaded due to restrictions. Please try another video.")
+        return None
     except Exception as e:
         st.error(f"yt-dlp failed: {e}")
         return None
+    
 
 def main():
     st.title("Youtube Video Downloader")
@@ -41,6 +53,7 @@ def display_disclaimer():
     st.markdown("---")  # Horizontal line
     st.markdown(
         """
+        
         **Disclaimer**  
         This application is provided as is for educational and informational purposes only.  
         The author, Risz-Sgr, is not responsible for any misuse of this tool.  
