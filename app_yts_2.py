@@ -17,8 +17,7 @@ def download_with_ytdlp(url):
     try:
         ydl_opts = {
             'format': 'best',
-            'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder
-            'cookiefile': 'cookies.txt',  
+            'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder             
         }
         st.write("Downloading...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -58,6 +57,7 @@ def display_disclaimer():
         This application is provided as is for educational and informational purposes only.  
         The author ``Risz-Sgr`` is not responsible for any misuse of this tool.  
         Please ensure compliance with YouTube's terms of service and copyright laws when using this application.  
+        **Ver:0.4**
         """
     )
 
