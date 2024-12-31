@@ -9,8 +9,8 @@ import streamlit as st
 
 # Set page title and icon
 st.set_page_config(
-    page_title="YouTube Downloader",  # Ganti dengan nama aplikasi anda
-    page_icon="🎥",  # Ganti dengan emoji atau ikon unicode lain
+    page_title="YouTube Downloader",  
+    page_icon="🎥",  
 )
 
 def download_with_ytdlp(url):
@@ -18,7 +18,7 @@ def download_with_ytdlp(url):
         ydl_opts = {
             'format': 'best',
             'outtmpl': 'downloads/%(title)s.%(ext)s',  # Save in a "downloads" folder
-            'cookiefile': 'cookies.txt',  # Tambahkan baris ini
+            'cookiefile': 'cookies.txt',  
         }
         st.write("Downloading...")
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -56,7 +56,7 @@ def display_disclaimer():
         
         **Disclaimer**  
         This application is provided as is for educational and informational purposes only.  
-        The author, Risz-Sgr, is not responsible for any misuse of this tool.  
+        The author ``Risz-Sgr`` is not responsible for any misuse of this tool.  
         Please ensure compliance with YouTube's terms of service and copyright laws when using this application.  
         """
     )
