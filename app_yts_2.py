@@ -19,7 +19,7 @@ def download_with_ytdlp(url):
         return None
 
 def main():
-    st.title("YT Video Downloader")
+    st.title("Youtube Video Downloader")
     url = st.text_input("Enter the YouTube video URL:")
     if st.button("Download"):
         if url:
@@ -32,6 +32,20 @@ def main():
                         file_name=os.path.basename(filename),
                         mime="video/mp4"
                     )
+# Disclaimer content
+def display_disclaimer():
+    st.markdown("---")  # Horizontal line
+    st.markdown(
+        """
+        **Disclaimer**  
+        This application is provided as is for educational and informational purposes only.  
+        The author, [Risz-Sgr], is not responsible for any misuse of this tool.  
+        Please ensure compliance with YouTube's terms of service and copyright laws when using this application.  
+        """
+    )
+
 
 if __name__ == "__main__":
     main()
+    # Call this function at the end of the app
+display_disclaimer()
