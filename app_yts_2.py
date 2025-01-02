@@ -62,7 +62,7 @@ def display_disclaimer():
         **Ver:0.4**
         """
     )
-    st.title("Support My Work! ☕")
+   
     
     # Add the Buy Me a Coffee button
     button_html = """
